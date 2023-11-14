@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,25 +126,26 @@
                         <outlet property="heightSlider" destination="TEI-uJ-xRZ" id="ymT-rT-TTF"/>
                         <outlet property="weightLabel" destination="MIb-eq-qej" id="zoZ-r5-1vt"/>
                         <outlet property="weightSlider" destination="QUH-DP-t7R" id="zhr-jE-YRN"/>
+                        <segue destination="wgE-iU-Wby" kind="presentation" identifier="goToResult" id="ADy-EA-Xh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="pkf-MX-WY0">
             <objects>
-                <viewController id="wgE-iU-Wby" sceneMemberID="viewController">
+                <viewController id="wgE-iU-Wby" customClass="ResultViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LPn-tl-MuL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-6X-Z2o">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-6X-Z2o">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wuv-1q-hqE">
-                                <rect key="frame" x="80.666666666666686" y="339" width="232" height="174"/>
+                                <rect key="frame" x="80.666666666666686" y="334" width="232" height="174"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFR-if-bn1">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="42"/>
@@ -167,7 +168,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-se-Ach">
-                                <rect key="frame" x="16" y="767" width="361" height="51"/>
+                                <rect key="frame" x="16" y="776" width="361" height="51"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="qOq-wd-OZI"/>
@@ -177,22 +178,30 @@
                                 <state key="normal" title="RECALCULATE">
                                     <color key="titleColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="wgE-iU-Wby" eventType="touchUpInside" id="tpB-S6-ONa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PIf-sM-59P"/>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.4823529411764706" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zNa-6X-Z2o" firstAttribute="top" secondItem="LPn-tl-MuL" secondAttribute="top" id="0lm-P2-c1U"/>
-                            <constraint firstAttribute="bottom" secondItem="zNa-6X-Z2o" secondAttribute="bottom" id="6FP-LO-Abd"/>
-                            <constraint firstItem="zNa-6X-Z2o" firstAttribute="leading" secondItem="LPn-tl-MuL" secondAttribute="leading" id="Ia6-4t-KUb"/>
+                            <constraint firstItem="zNa-6X-Z2o" firstAttribute="leading" secondItem="LPn-tl-MuL" secondAttribute="leading" id="NVw-zS-CeR"/>
+                            <constraint firstItem="zNa-6X-Z2o" firstAttribute="top" secondItem="LPn-tl-MuL" secondAttribute="top" id="Sta-GI-qen"/>
                             <constraint firstItem="iFZ-se-Ach" firstAttribute="leading" secondItem="LPn-tl-MuL" secondAttribute="leadingMargin" id="TK6-Ys-Nx5"/>
                             <constraint firstItem="iFZ-se-Ach" firstAttribute="trailing" secondItem="LPn-tl-MuL" secondAttribute="trailingMargin" id="asc-YZ-YTg"/>
-                            <constraint firstAttribute="trailing" secondItem="zNa-6X-Z2o" secondAttribute="trailing" id="cww-3v-wBg"/>
+                            <constraint firstAttribute="bottom" secondItem="zNa-6X-Z2o" secondAttribute="bottom" id="mZX-ZU-gM3"/>
                             <constraint firstItem="wuv-1q-hqE" firstAttribute="centerY" secondItem="LPn-tl-MuL" secondAttribute="centerY" id="oew-dX-rYp"/>
-                            <constraint firstItem="iFZ-se-Ach" firstAttribute="bottom" secondItem="PIf-sM-59P" secondAttribute="bottom" id="sQi-7I-UKg"/>
+                            <constraint firstItem="iFZ-se-Ach" firstAttribute="bottom" secondItem="PIf-sM-59P" secondAttribute="bottom" constant="-15" id="t5A-t3-q4P"/>
+                            <constraint firstItem="zNa-6X-Z2o" firstAttribute="trailing" secondItem="LPn-tl-MuL" secondAttribute="trailing" id="tGu-de-MwH"/>
                             <constraint firstItem="wuv-1q-hqE" firstAttribute="centerX" secondItem="LPn-tl-MuL" secondAttribute="centerX" id="tOX-Cs-5ss"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cMC-9U-3WR"/>
+                    <connections>
+                        <outlet property="adviceLabel" destination="wSC-iB-Wpg" id="Jib-TI-T1G"/>
+                        <outlet property="bmiLabel" destination="5BV-8a-Umc" id="Ic2-0A-3Zi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJV-Ae-Jj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
