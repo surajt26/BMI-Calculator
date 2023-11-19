@@ -145,23 +145,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wuv-1q-hqE">
-                                <rect key="frame" x="80.666666666666686" y="334" width="232" height="174"/>
+                                <rect key="frame" x="76" y="332.33333333333331" width="241" height="177.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFR-if-bn1">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="241" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BV-8a-Umc">
-                                        <rect key="frame" x="0.0" y="50.000000000000007" width="232" height="95.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="50.000000000000007" width="241" height="95.666666666666686"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EAT SOME MORE SNACKS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-iB-Wpg">
-                                        <rect key="frame" x="0.0" y="153.66666666666669" width="232" height="20.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="153.66666666666669" width="241" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -184,7 +184,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PIf-sM-59P"/>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.4823529411764706" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.4823529412" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zNa-6X-Z2o" firstAttribute="leading" secondItem="LPn-tl-MuL" secondAttribute="leading" id="NVw-zS-CeR"/>
                             <constraint firstItem="zNa-6X-Z2o" firstAttribute="top" secondItem="LPn-tl-MuL" secondAttribute="top" id="Sta-GI-qen"/>
